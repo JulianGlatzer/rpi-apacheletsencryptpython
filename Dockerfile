@@ -2,7 +2,7 @@ FROM arm32v7/debian:stable
 
 MAINTAINER Julian Glatzer "jg@commail.glatzer.eu"
 
-RUN apt-get update --fix-missing && apt-get install -y \
+RUN apt-get update --fix-missing && apt-get upgrade -y && apt-get install -y \
     openssl \
     apache2 apache2-doc apache2-utils \
     certbot \
