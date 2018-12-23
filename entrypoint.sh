@@ -12,7 +12,6 @@ term_handler() {
 trap term_handler INT TERM KILL
 
 a2ensite letsencrypt
-echo "Hallo" > /var/www/html/test.txt
 /etc/init.d/apache2 start
 
 certbot certonly --webroot -n -w /var/www/html -d iot.glatzer.eu --agree-tos -m jg@commail.glatzer.eu 

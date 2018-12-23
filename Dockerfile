@@ -8,8 +8,6 @@ RUN apt-get update --fix-missing && apt-get install -y \
     certbot \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-#ADD conf
-
 VOLUME ["/apache","/etc/letsencrypt"]
 
 EXPOSE 80 81 443
